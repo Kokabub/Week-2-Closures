@@ -14,6 +14,19 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
+const recVolume = height => {
+  let arr = [height]
+  // let volume
+  return function rec(value){
+    if(arr.length < 3){
+      arr.push(value)
+    }
+    if(arr.length === 3){
+      return arr.reduce((acc, num) => acc *= num)
+    }
+    else {return rec}
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
