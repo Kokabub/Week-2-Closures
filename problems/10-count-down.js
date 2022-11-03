@@ -29,7 +29,17 @@ Example 4:
 ***********************************************************************/
 
 // Your code here
-
+const countDownTimer = n => {
+  if (n <= 0) {
+    return 'Happy New Year!';
+  }
+  let counter = n;
+  return function name() {
+    counter--;
+    if (counter == 0) return 'Happy New Year!';
+    else return name;
+  }
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
